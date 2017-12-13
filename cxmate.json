@@ -1,0 +1,47 @@
+{
+  "general": {
+    "location": "0.0.0.0:80",
+    "logger": {
+      "debug": true
+    }
+  },
+  "service": {
+    "location": "localhost:8080",
+    "title": "SANA",
+    "version": "1.0.0",
+    "author": "",
+    "email": "Eric Sage",
+    "description": "Aligns two networks",
+    "license": "MIT",
+    "language": "Golang",
+    "parameters": [
+      {
+        "name": "duration",
+        "default": 1,
+        "description": "The duration of the alignment algorithm",
+        "type": "integer"
+      }
+    ],
+    "singletonInput": false,
+    "input": [
+      {
+        "label": "network one",
+        "description": "The first network edge list to be aligned",
+        "aspects": ["edges"]
+      },
+      {
+        "label": "network two",
+        "description": "The second network edge list to be aligned",
+        "aspects": ["edges"]
+      }
+    ],
+    "singletonOutput": true,
+    "output": [
+      {
+        "label": "alignment",
+        "description": "The alignment network edge list",
+        "aspects": ["edges"]
+      }
+    ]
+  }
+}
